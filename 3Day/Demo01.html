@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+	</head>
+	<style>
+		* {
+		margin: 0;
+		padding: 0;
+	}
+	  .body{
+		  background: url(/img_change1);
+	  }
+
+		.div_tw {
+		width: 100%;
+		background: cyan;
+	}
+
+	.p_on {
+		width: 20%;
+		text-align: center;
+		
+		background: url(../img/ico.gif)no-repeat 190px 7px;
+	}
+
+	.ul_on {
+		width: 80px;
+		
+		display: none;
+	}
+
+	.ul_on li {
+		text-align: center;
+		background: cyan;
+		list-style: none;
+	}
+
+	.div_on {
+		z-index: 999;
+		width: 600px;
+		height: 300px;
+		border: 1px solid black;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: none;
+		background: white;
+	}
+
+	.div_on .p_on {
+		width: 100%;
+		float: left;
+		background: #eee;
+		color: black;
+	}
+
+	.div_on .p_on .span_on {
+		margin-left: 48%;
+	}
+
+	.div_on .p_on .span_tw {
+		margin-left: 37%;
+	}
+
+	.div_on .p_tw {
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.div_on .p_tw .span_th {
+		margin-left: 20px;
+	}
+
+	.div_on .p_th {
+		width: 100%;
+		margin-top: 20px;
+		position: relative;
+	}
+
+	.div_on .p_th .span_fo {
+		margin-left: 20px;
+	}
+
+	.div_on .p_th #ipt2 {
+		width: 60%;
+		padding-bottom: 100px;
+	}
+
+	.div_on .p_th .span_fi {
+		position: absolute;
+		top: 50px;
+		left: 450px;
+	}
+
+	.div_on #btn {
+		width: 100px;
+		height: 30px;
+		border: none;
+		outline: none;
+		background: cyan;
+		margin-left: 73px;
+		margin-top: 25px;
+	}
+
+	#inner {
+		z-index: 1;
+		display: none;
+		width: 100%;
+		height: 100%;
+		opacity: 0.3;
+		background: #000;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.div_th {
+		width: 550px;
+		height: 180px;
+		border: 1px solid black;
+		position: absolute;
+		left: 40%;
+		top: 150px;
+		display: none;
+	}
+
+	.div_th .p_on {
+		width: 100%;
+		height: 30px;
+		border-bottom: 1px solid black;
+		background: #eee;
+		line-height: 30px;
+	}
+
+	.div_th .p_on .span_on {
+		margin-left: 10px;
+	}
+
+	.div_th .p_on .span_tw {
+		margin-left: 65%;
+	}
+
+	.div_th .p_tw {
+		width: 90%;
+		margin-left: 10px;
+	}
+	.change {
+		
+		width: 400px;
+		height: 250px;
+		position: absolute;
+		margin: auto;
+		top: 0 ;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #cccccc;
+		display: none;
+		
+		
+	}
+	.change .p_change { 
+		
+		background-color: #000;
+		color: white;
+		text-align: center;
+	}
+	.change .p_change .span{
+		margin-left: 100px;
+	}
+
+	.change .p .img_change ul{
+		width: 1000px;
+		height: 200px;
+		float: left;
+		list-style: none;
+	}
+	.ul_change li{
+		float: left;
+		width: 100px;
+		height: 100px;
+		list-style: none;
+		
+		
+	}
+	.ul_change li img{
+		width: 100px;
+		height: 100px;
+		margin-top: 20px;
+		cursor: pointer;
+	}
+	.span_change1{
+		margin-left: 288px;
+		cursor: pointer;
+	}
+
+	</style>
+	<body style="background:url(img/one.jpg)">
+		<div class="div_tw">
+			<p id="p_on">
+				<span id="span_on">
+					个人中心
+				</span>
+			</p>
+		</div>
+		<ul class="ul_on">
+			<li id="li_on">发文</li>
+			<li id="li_change">换肤</li>
+			<li>帮助</li>
+			<li>退出</li>
+		</ul>
+		<div class="div_on">
+			<p class="p_on">
+				<span class="span_on">发表博文</span>
+				<span class="span_tw">✖</span>
+			</p>
+			<p class="p_tw">
+				<span class="span_th">标题：</span>
+				<input type="text" name="" id="ipt1" value="" />
+				<span>(*不能为空)</span>
+			</p>
+			<p class="p_th">
+				<span class="span_fo">内容：</span>
+				<input type="text" name="" id="ipt2" value="" />
+				<span class="span_fi">(*不能为空)</span>
+			</p>
+			<input type="button" id="btn" value="发表" />
+		</div>
+		<div class="change">
+			<p class="p_change">
+			<span class="span_change">请选择皮肤</span>
+			<span class="span_change1">✖</span>
+			
+			</p>
+			<div class="img_change" id="change_img">
+			<ul class="ul_change">
+				<li  style="background:url(img/five.jpg)"><img src="img/five.jpg"></li>
+				<li  style="background:url(img/four.jpg)"><img src="img/four.jpg"></li>
+				<li  style="background:url(img/one.jpg)"><img src="img/one.jpg"></li>
+				<li style="background:url(img/six.jpg)"><img src="img/six.jpg"></li>
+				<li  style="background:url(img/three.jpg)"><img src="img/three.jpg"></li>
+				<li  style="background:url(img/two.jpg)"><img src="img/two.jpg"></li>
+				
+			</ul>
+			</div>
+
+
+			
+		</div>
+		<div class="div_th">
+			<p class="p_on">
+				<span class="span_on"></span>
+				<span class="span_tw"></span>
+			</p>
+			<p class="p_tw"></p>
+		</div>
+	</body>
+	<script type="text/javascript"> 
+		var ospan = document.getElementById("span_on");
+		var oul = document.getElementsByClassName("ul_on")[0];
+		var guan  = document.getElementsByClassName("span_tw")[0];
+		var odiv = document.getElementsByClassName("div_on")[0];
+		var oli = document.getElementById("li_on");
+		var oinner = document.getElementById("inner");
+		var op = document.getElementById("p_on");
+		var btn = document.getElementById("btn");
+		var div_th = document.getElementsByClassName("div_th")[0];
+		
+		ospan.onmouseover = function(){
+			block();	
+		}
+		ospan.onmouseout = function(){
+			none();		
+		}
+		oul.onmouseover = function(){
+			block();
+		}
+		oul.onmouseout = function(){
+			none();
+		}
+		//打开发文盒子
+		oli.onclick = function(){
+			odiv.style.display = "block";
+			oinner.style.display = "block";	//阴影状态为显示
+			document.body.style.overflow = "hidden";	//将页面锁定，不带滚动条
+		}
+		//关闭发文盒子
+		guan.onclick = function(){
+			none1();
+		}
+		function none1(){
+			odiv.style.display = "none";
+			oinner.style.display = "none";	//阴影状态为隐藏
+			document.body.style.overflow = "auto";//将页面解锁定
+		}
+		//发文显示的方法
+		function block(){
+			oul.style.display = "block";
+			op.style.background = "url(img/ico.gif)no-repeat 190px -18px";
+		}
+		//发文隐藏的方法
+		function none(){
+			oul.style.display = "none";
+			op.style.background = "url(img/ico.gif)no-repeat 190px 7px";
+		}
+		btn.onclick = function(){
+			none1();
+			div_th.style.display = "block";
+
+
+		}
+		// 显示换肤框
+		var OLi = document.getElementById("li_change");
+		var Hz = document.getElementsByClassName("change");
+		OLi.onclick = function(){
+			Hz[0].style.display = "block";
+			
+      
+    	}
+			// 隐藏换肤框
+		var Guan = document.getElementsByClassName("span_change1")[0];
+		var Hz1 = document.getElementsByClassName("change")[0];
+    		Guan.onclick = function(){
+        	Hz1.style.display = "none";
+			
+    	}
+			// 换肤效果
+		var changeP = document.getElementById("change_img");
+		var changeL =  changeP.getElementsByTagName("li");
+		var bb = document.getElementsByTagName("body")[0];
+		for(var i =0; i<changeL.length; i++){
+			changeL[i].index=i;
+			changeL[i].onclick=function(){
+				for(var i =0; i<changeL.length; i++){
+					bb.style.background= "";
+					// alert(1);
+			}
+            bb.style.background= changeL[this.index].style.background;
+
+			
+        }
+    }
+		function getWidth(){
+        var w = document.documentElement.clientWidth || document.body.clientWidth;
+        return w;
+    }
+    function getHeight(){
+        var h= document.documentElement.clientHeight || document.body.clientHeight;
+        return h;
+    }
+    //鼠标按下
+    Hz[0].onmousedown = function (event) {
+		
+        var e = event || window.event;
+        //点击的坐标距离盒子本身的距离
+        var disX = e.clientX - Hz[0].offsetLeft;
+        var disY = e.clientY - Hz[0].offsetTop;
+        document.onmousemove = function (event) {
+            var e = event || window.event;
+            var l = e.clientX - disX;
+            var t = e.clientY - disY;
+            if(t <= 0){
+                t = 0;
+            }
+            if(l <= 0){
+                l = 0;
+            }
+            if(l > getWidth() - Hz[0].offsetWidth){
+                l = getWidth() - Hz[0].offsetWidth;
+            }
+            if(t > getHeight() - Hz[0].offsetHeight){
+                t = getHeight() - Hz[0].offsetHeight;
+            }
+            Hz[0].style.left = l + "px";
+            Hz[0].style.top = t + "px";
+						Hz[0].style.margin = 0;
+        }
+        document.onmouseup = function () {
+            document.onmousemove = null;
+        }
+    }
+
+   
+
+	</script>
+</html>

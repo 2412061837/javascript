@@ -1,0 +1,22 @@
+<script>
+    var OLi = document.getElementById("li_change");
+    var Hz = document.getElementsByClassName("change");
+    oli.onclick = function(){
+        // Hz.style.display ="block"; 
+        alert(1);
+    }
+    var Guan = document.getElementsByClassName("span_change1");
+    var Hz = document.getElementsByClassName("change");
+    Hz.onclick = function(){
+        Hz.style.display = "none";
+    }
+    var changeP = document.getElementsByClassName("img_change");
+    var changeL =  changeP.getElementsByTagName("li");
+    var bb = document.getElementsByTagName("body");
+    for( var i =0; i<changeL.length; i++){
+        changeL[i].index=i;
+        changeL[i].onclick=function(){
+            bb.style.background= changeL[this.index].style.background;
+        }
+    }
+</script>
