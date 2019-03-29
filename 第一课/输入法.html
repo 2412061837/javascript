@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        width: 100px; height: 30px;
+        text-align: center;
+        position: absolute;
+        margin: -30px 0 0 21px ;
+        cursor: pointer;
+        
+    } 
+    ul{
+        width: 100px;
+        height: auto;
+        margin-top: 40px;
+    } 
+    
+    li{
+       list-style: none;
+       display: none;
+
+      
+        
+        
+    }
+</style>
+<body>
+    <input type="button" name="" id="Srf" value="输入法"/>
+    <ul class="XX">
+        <li>搜狗输入法</li>
+        <li>五笔输入法</li>
+        <li>微软拼音输入法</li>
+        
+    </ul>
+    
+</body>
+</html>
+<script>
+    var Osrf = document.getElementById("Srf")[0];
+    var Oxx = document.getElementsByClassName("XX")[0];
+    Osrf.onclick = function(){
+        Oxx[0].style.display = "block";
+
+    }
+
+
+</script>

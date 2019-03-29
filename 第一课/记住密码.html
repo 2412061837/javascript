@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .outer{
+        width: 400px;
+        height: 400px;
+
+
+    }
+    .password input{
+        margin-right:5px;vertical-align:middle;
+    }
+    #tab{
+        display: none;
+    }
+</style>
+<body>
+    <div id="outer">
+        <div class="password"><input type="checkbox">记住密码</div>
+       <div id="tab">为了你的信息安全 请您不要在公共网络或者网吧使用此功能 以免为您造成不必要的损失</div>
+    </div>
+</body>
+
+</html>
+<script>
+    window.onload = function (){
+        var otab = document.getElementById("tab");
+        var opassword =document.getElementsByClassName("password")[0];
+        opassword.onmouseover = function(){
+            otab.style.display = "block"
+        };
+        otab.onmouseout = function(){
+            otab.style.display = "none"
+        };
+
+    }
+</script>
